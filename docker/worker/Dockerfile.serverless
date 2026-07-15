@@ -27,8 +27,8 @@ RUN pip install --no-cache-dir \
 
 WORKDIR /app
 
-COPY app /app/app
-COPY modules /app/modules
-COPY docker /app/docker
+COPY app /app
+COPY modules /modules
+COPY docker /docker
 
 CMD ["python", "-u", "docker/worker/runpod_handler.py"]
